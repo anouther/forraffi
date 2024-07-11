@@ -1,0 +1,74 @@
+<html>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js">
+</script>
+    <link href="style.css" rel="stylesheet" type="text/css" /><script src="script.js"></script>
+<body>
+<style>body{background-image: url("as.jpg");background-repeat: no-repeat;background-size: 100% 100%;font-family: 'Tilt Neon', sans-serif; animation:none;transition:all .3s ease;}</style>
+
+<div id="konten"><div id="foto"><div class="image"><img id="photo" src="15.gif" width="200px" height="200px"/></div><span id="sp2"></span></div>
+
+<div id='slider'>
+  <p>there u are, hello &nbsp;<b id="kamu"></b></p>
+  <p>haloo sayangg, kamu tau gaa hari ini harii apaa? </p> 
+  <p>pastii kamu gaakan tau because kamu lupaan kann orang nya hehehe</p>
+  <p> hari ini adalah hari mensive kita yang ke 1 bulan</p> 
+  <p>mungkin aku lupaan orang nya, tapi aku gaakan lupain hari dimana kamu nyatain perasaan kamu</p>
+  <p>for the first time when i look u at school, aku ga berekspetasi tinggi bahwa kamu akan jalin hubungan dengan aku</p>
+  <p>maaf yaa kalo aku belum bisa jadi yang terbaik buat kamu ataupun belum cukup buat kamu</p>
+  <p>i promise i will be there for u on good and bad days</p>
+  <p>thank you for loving me, thank you for listening me, for never giving up on me</p> 
+  <p>terimakasih sudah jadi yang terbaik, kamu tetep terbaik sekarang,besok dan seterusnya!</p>
+  <p> i love u more than loving myself</p>
+  <p>di dunia ini diciptain hal hal yang indah, mungkin kamu salah satunya</p> 
+  <p> jangan pernah ngerasa sendiri, i'm here for u call me if u need me .</p>
+  <p>ketemu kamu itu adalah hal yang paling aku syukuri di dunia ini</p>
+  <p> jangan pernah merendahkan diri! dimata ku, kamu lebih dari sempurna </p>
+  <p>jangan lupa pencet love nya ya! <label class='lovein' onClick="duar()">💝</label></p>
+</div><div id="contTom"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>Kirim</a></div>
+</div>
+<div id="bodyblur"></div>
+
+<script>  
+var a=0,finish;
+finish = "jangan pernah ngerasa sendiri, kamu udah jadi yang terbaik sampai hari ini kamu udah jadi orang yang baik buat aku dan orang lain. terimakasii udah pilih aku! i love u sayanggkuuu<3 ";
+
+        function play() {
+          var audio = new Audio('sempurna.mp3');
+          audio.play();
+        }
+            
+ function bukaWa(){window.location = "https://t.me/Sixngle"}
+</script>
+ 
+<script type="text/javascript">            
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+            const swals = Swal.mixin({
+                allowOutsideClick: false,
+            });
+            async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Masukin nama kamu!',
+                    input: 'text',
+                    confirmButtonText: 'next',
+                    showCancelButton: false,
+                });                           
+                if(nama){
+                	window.nama = nama;
+                    finish = finish + ", " + nama + "!";    
+                    document.getElementById("kamu").innerHTML = "" + window.nama;
+                    setTimeout(showDiv, 700);play();                      
+                } else {
+                    await swals.fire('Heh! Jangan dikosongin atuh namanya buru isi 😡');
+                    mulai();
+                }
+            }
+            mulai();
+</script>
+</body>
+</html>
